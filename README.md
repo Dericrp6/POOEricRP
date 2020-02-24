@@ -1,2 +1,2 @@
 # POOEricRP
-java
+Repositorio de la clase en lenguaje Java
