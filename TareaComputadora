@@ -1,0 +1,77 @@
+import ico.fes.componentes.Mouse;
+import ico.fes.componentes.Procesadore;
+import ico.fes.componentes.Teclado;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Erick
+ */
+public class Computadora {
+    private String marca;
+    private String modelo;
+    private int Mouse;
+    private int Procesadore;
+    private int Teclado;
+
+    public Computadora() {
+    }
+
+    public Computadora(String marca, String modelo, int Mouse, int Procesadore, int Teclado) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.Mouse = Mouse;
+        this.Procesadore = Procesadore;
+        this.Teclado = Teclado;
+    }
+
+    public int getTeclado() {
+        return Teclado;
+    }
+
+    public void setTeclado(int Teclado) {
+        this.Teclado = Teclado;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getMouse() {
+        return Mouse;
+    }
+
+    public void setMouse(int Mouse) {
+        this.Mouse = Mouse;
+    }
+
+    public int getProcesadore() {
+        return Procesadore;
+    }
+
+    public void setProcesadore(int Procesadore) {
+        this.Procesadore = Procesadore;
+    }
+    
+    public void encender(){
+        System.out.println("Encendiendo, por favor espere");
+    }
+    
+}
