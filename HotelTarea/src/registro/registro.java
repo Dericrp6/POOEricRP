@@ -4,7 +4,7 @@ import alojamiento.Hotel;
 
 public class Registro {
     public static void main(String[] args) {
-        Hotel diamondInn = new Hotel("Diamond Inn", "Cancún");
+        Hotel diamondInn = new Hotel("Diamond Inn", "Tulum");
         diamondInn.mostrarMenu();
     }
 }

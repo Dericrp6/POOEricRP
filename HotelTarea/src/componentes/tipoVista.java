@@ -2,7 +2,7 @@ package componentes;
 
 public enum TipoVista {
     mar("Al mar", 350),
-    golf("Al campo de golf", 200);
+    golf("Al campo de Golf", 200);
     
     private final String descripcion;
     private final int precio;

@@ -1,4 +1,4 @@
-package alojamiento;
+package lugarDeAlojamiento;
 
 import componentes.Reservacion;
 import componentes.TipoHabitacion;
@@ -44,16 +44,16 @@ public class Hotel {
     public void mostrarMenu() {
         int salir = 0;
         do {
-            System.out.println("BIENVENIDOS A " + getNombre().toUpperCase());
+            System.out.println("Bienvenidos a" + getNombre().toUpperCase());
             System.out.println("");
-            System.out.println("Selecciona el número de la opción deseada");
+            System.out.println("Selecciona la opcion que desea");
             System.out.println("1. Reservar habitación");
             System.out.println("2. Mostrar reservación");
             System.out.println("3. Actualizar información");
-            System.out.println("4. Finalizar estancia");
+            System.out.println("4. Finalizar reservacion");
             System.out.println("0. Exit");
             
-            //Leer la respuesta del usuario
+            
             int respuesta = Util.validarRespuesta(0, 4);
             
             switch (respuesta) {
@@ -74,7 +74,7 @@ public class Hotel {
                     break;
                 default:
                     System.out.println();
-                    System.out.println("....¡¡Selecciona una opción!!....");
+                    System.out.println(" Por favor seleccione una opcion ");
                     System.out.println();
                     salir = 1;
                     break;
@@ -87,12 +87,12 @@ public class Hotel {
         
         do {
             System.out.println();
-            System.out.println(":: INGRESAR DATOS ::");
+            System.out.println(" - Ingrese sus datos - ");
             Scanner teclado = new Scanner(System.in);
-            System.out.print("Ingresa tu nombre: ");
+            System.out.print("Ingrese su nombre: ");
             String nombre = teclado.nextLine();
-            System.out.println("Selecciona el número de la opción deseada");
-            System.out.println("Deseas incluir todos los servicios: ");
+            System.out.println("Selecciona su opcion:");
+            System.out.println("¿Desea el paquete todo incluido? : ");
             System.out.println("1. Si");
             System.out.println("2. No");
             int respuesta = Util.validarRespuesta(1, 2);
@@ -106,7 +106,7 @@ public class Hotel {
                     break;
             }
             TipoHabitacion habitacion = TipoHabitacion.sencilla;
-            System.out.println("Selecciona tu habitación: ");
+            System.out.println("Seleccione su habitación: ");
             if (todoIncluido) {
                 System.out.println("1. Sencilla");
                 System.out.println("2. Doble");
@@ -158,9 +158,9 @@ public class Hotel {
                 }
             }
             
-            System.out.println("Escoja la vista deseada: ");
+            System.out.println("Escoja la vista que desea: ");
             System.out.println("1. Al mar");
-            System.out.println("2. Al campo de golf");
+            System.out.println("2. Al campo de Golf");
             respuesta = Util.validarRespuesta(1, 2);
             TipoVista vista = TipoVista.mar;
             switch (respuesta) {
@@ -172,10 +172,10 @@ public class Hotel {
                     break;
             }
             
-            System.out.println("Ingrese el número de su hora de entrada (entre 3 pm y 12 pm): ");
+            System.out.println("Ingrese su hora de entrada (3 pm a 12 pm): ");
             respuesta = Util.validarRespuesta(3, 12);
             int horaEntrada = respuesta;
-            System.out.println("Ingrese el número de su hora de salida (entre 3 pm y 12 pm): ");
+            System.out.println("Ingrese su hora de salida (3 pm a 12 pm): ");
             respuesta = Util.validarRespuesta(3, 12);
             int horaSalida = respuesta;
             
@@ -186,10 +186,10 @@ public class Hotel {
                 System.out.println(i+1 + ". " + reservaciones.get(i).getHuesped());
             }
             System.out.println();
-            System.out.println("La habitación ha quedado reservada.");
+            System.out.println("Su habitacion ha quedado reservada.");
             System.out.println();
             
-            //Regresar al menu anterior
+            
             respuesta = 0;
             
             if(respuesta == 0) {
@@ -205,7 +205,7 @@ public class Hotel {
         
         do {
             System.out.println();
-            System.out.println(":: RESERVACIONES ::");
+            System.out.println(" Reservaciones :");
             
             for (int i = 0; i < reservaciones.size(); i++) {
                 System.out.println(i+1 + ". " + reservaciones.get(i).getHuesped());
@@ -235,7 +235,7 @@ public class Hotel {
         
         do {
             System.out.println();
-            System.out.println(":: ACTUALIZAR DATOS ::");
+            System.out.println(" - Actualizar datos - ");
             
             for (int i = 0; i < reservaciones.size(); i++) {
                 System.out.println(i+1 + ". " + reservaciones.get(i).getHuesped());
